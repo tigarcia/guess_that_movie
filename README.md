@@ -5,7 +5,60 @@ This is designed as a guide to help learn functions in python by writing a fun g
 
 ## Movie Guessing Game
 
-In this repository, there are 3 python files: [movies.py](movies.py), [guess_that_movie.py](guess_that_movie.py), and [guess_that_movie_solution.py](guess_that_movie_solution.py).  Your task is to implement the movie guessing game described here in the [guess_that_movie.py](guess_that_movie.py) file.
+In this repository, there are 3 python files: [movies.py](movies.py), [guess_that_movie.py](guess_that_movie.py), and [guess_that_movie_solution.py](guess_that_movie_solution.py).  Your task is to implement a movie guessing game in the [guess_that_movie.py](guess_that_movie.py) file.
+
+### Game Requirements
+
+The goal of the game is to try to guess the title of a random movie.  The code for getting a random movie is already provided by the [movie.py](movie.py) file.  You should not have to modify this file.
+
+The game should first print all the actors in the movie, then present the user with a few options. The user has 2 options: make a guess or ask for a hint or quit the game.  If the user guesses and is correct, they win and the user should be given another movie to guess.  If the user asks for a hint, more movie information should be shown. After all the hints are given, the user can give up and see the answer.  The user should be able to quit the game at any time.
+
+Here is a suggested order for hints:
+
+1. Actors
+1. Year
+1. Director
+1.  Plot
+
+Here is a sample of game output:
+
+```sh
+Guess the movie!
+Actors: Brad Pitt, Christian Slater, Virginia McCollam, John McConnell
+Type your guess, or
+h - get a hint
+q - quit
+h
+Year: 1994
+Type your guess, or
+h - get a hint
+q - quit
+h
+Director: Neil Jordan
+Type your guess, or
+h - get a hint
+q - quit
+h
+Plot: A vampire tells his epic life story: love, betrayal, loneliness, and hunger.
+Type your guess, or
+g - give up, tell me the answer
+q - quit
+g
+
+The moive was Interview with the Vampire: The Vampire Chronicles
+
+Guess the movie!
+Actors: Thomas Rongen, Jaiyah Saelua, Nicky Salapu, Gene Ne'emia
+Type your guess, or
+h - get a hint
+q - quit
+q
+
+Thanks for playing!
+
+
+```
+
 
 
 ## What are Functions?

@@ -1,5 +1,6 @@
+import urllib.request
 import random
-import requests
+import json
 
 def random_movie_id():
     movie_ids = ["tt0068646","tt0099685","tt0110912","tt0114814","tt0078788","tt0117951","tt0137523","tt0108052","tt0118749","tt0105236","tt0111161","tt0073195","tt0075314","tt0119488","tt0088763","tt0071562","tt0116282","tt0175880","tt0086250","tt0265666","tt0246578","tt0091763","tt0113277","tt0169547","tt0118715","tt0081398","tt1235166","tt0407887","tt0129387","tt0110413","tt0317248","tt0087843","tt0120735","tt0120382","tt0114709","tt0078748","tt0128445","tt0133093","tt0468569","tt0114369","tt0119217","tt0090605","tt0077416","tt0070047","tt0073486","tt0112641","tt0108399","tt0401792","tt0172495","tt0082971","tt0100150","tt0120601","tt0095016","tt0034583","tt1250777","tt0482571","tt0209144","tt0361748","tt0092991","tt0107290","tt0120689","tt0067116","tt0105695","tt0120706","tt0071315","tt0780504","tt0083907","tt0109830","tt0104348","tt0084787","tt0033467","tt0090756","tt0092005","tt0081505","tt0070917","tt0338013","tt0093779","tt0139239","tt0372784","tt0066921","tt0093058","tt0167260","tt0103064","tt0120363","tt0120815","tt0112851","tt0097576","tt0387564","tt0097937","tt0310793","tt0328107","tt0181875","tt0146882","tt1853728","tt0050083","tt0095953","tt0181689","tt0167261","tt0058150","tt1285016",
@@ -17,8 +18,10 @@ def random_movie_id():
 
 def random_movie_data():
     id = random_movie_id()
-    url_base = "http://www.omdbapi.com/"
-    query_string_data = {'i': id, 'r': 'json'}
-    r = requests.get(url_base, params=query_string_data)
-    return {k: r.json()[k] for k in ('Actors', 'Director',
-                                     'Plot', 'Year', 'Title')}
+    url = "http://www.omdbapi.com/?i={}&r=json".format(id)
+    resp = urllib.request.urlopen(url)
+    data = resp.read()
+    encoding = resp.info().get_content_charset('utf-8')
+    jdata = json.loads(data.decode(encoding))
+    return {k: jdata[k] for k in ('Actors', 'Director',
+                                  'Plot', 'Year', 'Title')}

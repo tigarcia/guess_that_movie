@@ -28,7 +28,7 @@ def handle_response(hints, movie_data, resp):
         h = hints.pop()
         print("{}: {}".format(h, movie_data[h]))
     elif resp == "g":
-        print("\nThe moive was {\n".format(movie_data['Title']))
+        print("\nThe moive was {}\n".format(movie_data['Title']))
         status = 1
     elif resp == "q":
         status = 2

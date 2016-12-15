@@ -1,7 +1,7 @@
 # Guess that Movie!
 #### A practice problem for learning functions in python
 
-This is designed as a guide to help learn functions in python by writing a fun game (hopefully it's fun!!).  The readme will have some background on python functions as well as pointers to coding problems to practice python.
+This is designed as a guide to help learn functions in python by writing a fun game (hopefully it's fun!!).  The readme starts out with the description of the movie guessing game.  After the details about the guessing game, there is more information on what python functions are if you need a refresher. Lastly, there are additional resources to help you learn.
 
 ## Movie Guessing Game
 
@@ -11,7 +11,7 @@ In this repository, there are 3 python files: [movies.py](movies.py), [guess_tha
 
 The goal of the game is to try to guess the title of a random movie.  The code for getting a random movie is already provided by the [movie.py](movie.py) file.  You should not have to modify this file.
 
-The game should first print all the actors in the movie, then present the user with a few options. The user has 2 options: make a guess or ask for a hint or quit the game.  If the user guesses and is correct, they win and the user should be given another movie to guess.  If the user asks for a hint, more movie information should be shown. After all the hints are given, the user can give up and see the answer.  The user should be able to quit the game at any time.
+The game should first print all the actors in the movie, then present the user with a few options. The user has a few options: make a guess, ask for a hint, or quit the game.  If the user guesses correctly, the user wins and the user should be given another movie to guess.  If the user asks for a hint, more movie information should be shown. After all the hints are given, the user can give up and see the answer.  The user should be able to quit the game at any time.
 
 Here is a suggested order for hints:
 
@@ -59,6 +59,25 @@ Thanks for playing!
 
 ```
 
+### File Details
+
+* [movies.py](movies.py) - Has the function `random_movie_data` for getting a random movie.  You should not need to modify this file.
+* [guess_that_movie.py](guess_that_movie.py) - The file you will edit to make your game
+* [guess_that_movie_solution.py](guess_that_movie_solution.py) - A sample solution of the game.
+
+### Running The Game
+
+To run the game:
+
+```py
+python guess_that_movie.py
+```
+
+If you want a reference, you can run the solution:
+
+```py
+python guess_that_movie_solution.py
+```
 
 
 ## What are Functions?

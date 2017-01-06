@@ -178,7 +178,7 @@ Now our code is a little more clear because we have grouped functionality into s
 
 * Write a function called `your_name_in_stars` that takes a name as an input and returns the name surrounded by stars.  The number of stars on the left and on the right should be equal to the number of characters in your name:
 
-```
+```py
 def your_name_in_stars(name):
 	# Your code here
 	return name

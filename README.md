@@ -174,6 +174,43 @@ while not check_guess(guess, num):
 
 Now our code is a little more clear because we have grouped functionality into separate functions.
 
+## Practice Problems
+
+* Write a function called `your_name_in_stars` that takes a name as an input and returns the name surrounded by stars.  The number of stars on the left and on the right should be equal to the number of characters in your name:
+
+```
+def your_name_in_stars(name):
+	# Your code here
+	return name
+
+# returns ****Jane****
+your_name_in_stars('Jane')
+```
+
+* Write a function that returns the average for a list of numbers:
+
+```py
+def avg(nums):
+	# Your code goes here
+	return 0
+```
+
+* Write a function that finds the maximum and minimum value in a list of numbers.  Return the max and min as a tuple were the first number is the maximum and the second number is the minimum:
+
+```py
+def max_min(nums):
+	# Your code goes here.
+	# You will have to change the return value
+	return (None, None);
+```
+* Write a function called `find_the_last`.  Your goal is to return the index of the _last_ occurrence of a character in a string.  If the character does not exist in the string, return None.
+
+```py
+def find_the_last(string, ch):
+	# Your code goes here.
+	return -1
+```
+
 ## Resources For Function Practice
 
 * [Rithm School's Python Course](https://www.rithmschool.com/courses/python-fundamentals-part-1) - A free course with lots of examples and exercises
